@@ -58,7 +58,8 @@ peercmd(){
 
     listdir(){
         cd /data
-        for i in $(find /data -name chains -type d |cut -f3 -d '/'); do echo "Last Dir. \n ${i}" ; done
+        echo "Last node name "
+        for i in $(find /data -name chains -type d |cut -f3 -d '/'); do echo -e " ${i}" ; done
        # find /data -name chains -type d |cut -f3 -d '/'
 }
 
