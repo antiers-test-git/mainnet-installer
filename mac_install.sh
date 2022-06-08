@@ -65,6 +65,7 @@ peercmd(){
                     mkdir -p /usr/local/bin/
                     cp peer /usr/local/bin/
                 echo "peer is ready to run"
+                fi
             else
                 cd $URS/                
                 cd $URS/Mainnet-binary
@@ -79,16 +80,14 @@ peercmd(){
      fi
     
 }
-    checkdir(){
-       mkdir /data
-        }
+    
 
-    listdir(){
+   listdir(){
         cd /opt
-        for i in $(find /opt -name chains -type d |cut -f3 -d '/'); do echo "Last Dir. \n ${i}" ; done
+        echo "Last node name "
+        for i in $(find /opt -name chains -type d |cut -f3 -d '/'); do echo -e " ${i}" ; done
        # find /opt -name chains -type d |cut -f3 -d '/'
 }
-
     peerconnect(){
         while [ -z $x ]
             do
